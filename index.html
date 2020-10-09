@@ -4,19 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Focus WebDev Assignment 1</title>
   <link rel="stylesheet" href="style.css">
 
+<!-- <script src="scripts.js" ></script> -->
   <style>
     @import url('./card.css');
-  </style>
 
+  </style>
+  <!-- <script type="text/javascript">
+
+  var x = document.getElementByClassName("card");
+  x.addEventListener("mouseover", myFunction);
+  x.addEventListener("mouseout", mySecondFunction);
+
+  function myFunction() {
+    document.getElementById("hide").style.display = "block";
+  }
+
+  function mySecondFunction() {
+    document.getElementById("hide").style.display = "none";
+  }
+  </script> -->
+<script type="text/javascript">
+function mOver(obj) {
+  // alert();
+  document.getElementById("description").style.display = "block";
+}
+
+function mOut(obj) {
+  // alert();
+  document.getElementById("description").style.display = "none";
+}
+
+</script>
 </head>
 
 <body>
 
+    <section class="portfolio-header">
+      <p>This is my collection of pages from my foundations website, made to look like a portfolio page. Imagine each card as a different website instead of pages of the same website. Each picture links to my pages. </p>
+      </section>
+
   <section class="card-list">
-    <article class="card">
+    <article class="card" onmouseover="mOver(this)" onmouseout="mOut(this)">
       <header class="card-header">
         <p>
           September 25th, 2020
@@ -24,19 +55,23 @@
           <h2>This page is to show off my drawing works!</h2>
         </header>
 
-        <div class="card-author">
-          <a class="author-avatar" href="https://suncraft.github.io/index/index.html">
+        <div class="card-content" >
+          <a class="content-avatar" href="https://suncraft.github.io/index/index.html" >
+            <iframe id="description" class="hide" src="https://suncraft.github.io/index/index.html" ></iframe>
             <img src="images/drawwebsitethumb01.png" />
           </a>
-          <svg class="half-circle" viewBox="0 0 106 57"></svg>
+          <!-- <svg class="half-circle" viewBox="0 0 106 57"></svg> -->
 
           <div class="author-name">
-            <div class ="author-name-prefix">
+            <div class ="card-title">
               Index
-
               </div>
             </div>
           </div>
+
+    <!-- for inline classes:
+      style="display:none" -->
+
 
       </article>
 
@@ -48,14 +83,15 @@
             <h2>This is a page where you learn about me</h2>
           </header>
 
-          <div class="card-author">
-            <a class="author-avatar" href="https://suncraft.github.io/index/about.html">
+          <div class="card-content" onmouseover="mOver(this)" onmouseout="mOut(this)">
+            <a class="content-avatar" href="https://suncraft.github.io/index/about.html" >
+              <iframe id="description" class="hide" src="https://suncraft.github.io/index/about.html"></iframe>
               <img src="images/aboutpagethumb01.png" />
             </a>
-            <svg class="half-circle" viewBox="0 0 106 57"></svg>
+            <!-- <svg class="half-circle" viewBox="0 0 106 57"></svg> -->
 
             <div class="author-name">
-              <div class ="author-name-prefix">
+              <div class ="card-title">
                 About me
                 </div>
               </div>
@@ -71,14 +107,15 @@
               <h2>The instructions and learning pages I used</h2>
             </header>
 
-            <div class="card-author">
-              <a class="author-avatar" href="https://suncraft.github.io/index/sources.html">
+            <div class="card-content">
+              <a class="content-avatar" href="https://suncraft.github.io/index/sources.html" onmouseover="mOver(this)" onmouseout="mOut(this)">
+                <iframe id="description" class="hide" src="https://suncraft.github.io/index/sources.html"></iframe>
                 <img src="images/sourcesthumb01.png" />
               </a>
-              <svg class="half-circle" viewBox="0 0 106 57"></svg>
+              <!-- <svg class="half-circle" viewBox="0 0 106 57"></svg> -->
 
               <div class="author-name">
-                <div class ="author-name-prefix">
+                <div class ="card-title">
                   Sources
                   </div>
                 </div>
@@ -94,14 +131,15 @@
                 <h2>A collection of pictures of our cat!</h2>
               </header>
 
-              <div class="card-author">
-                <a class="author-avatar" href="https://suncraft.github.io/index/cat.html">
+              <div class="card-content">
+                <a class="content-avatar" href="https://suncraft.github.io/index/cat.html" onmouseover="mOver(this)" onmouseout="mOut(this)">
+                  <iframe id="description" class="hide" src="https://suncraft.github.io/index/cat.html"></iframe>
                   <img src="images/catthumb01.png" />
                 </a>
-                <svg class="half-circle" viewBox="0 0 106 57"></svg>
+                <!-- <svg class="half-circle" viewBox="0 0 106 57"></svg> -->
 
                 <div class="author-name">
-                  <div class ="author-name-prefix">
+                  <div class ="card-title">
                     Quinn
                     </div>
                   </div>
@@ -117,14 +155,15 @@
                   <h2>My bonus page has another drawing</h2>
                 </header>
 
-                <div class="card-author">
-                  <a class="author-avatar" href="https://suncraft.github.io/index/bonus.html">
+                <div class="card-content">
+                  <a class="content-avatar" href="https://suncraft.github.io/index/bonus.html" onmouseover="mOver(this)" onmouseout="mOut(this)">
+                    <iframe id="description" class="hide" src="https://suncraft.github.io/index/bonus.html"></iframe>
                     <img src="images/bonusthumb01.png" />
                   </a>
-                  <svg class="half-circle" viewBox="0 0 106 57"></svg>
+                  <!-- <svg class="half-circle" viewBox="0 0 106 57"></svg> -->
 
                   <div class="author-name">
-                    <div class ="author-name-prefix">
+                    <div class ="card-title">
                       Bonus
                       </div>
                     </div>
@@ -134,10 +173,19 @@
 
   </section>
 
-  <section class="portfolio-header">
-    <p>This is my collection of pages from my foundations website, made to look like a portfolio page. Imagine each card as a different website instead of pages of the same website. Each picture links to my pages. </p>
-    </section>
+  <!-- <script type="text/javascript">
+  function mOver(obj) {
+    // alert();
+    document.getElementById("hide").style.display = "block";
 
+  }
+
+  function mOut(obj) {
+    // alert();
+    document.getElementById("hide").style.display = "none";
+  }
+
+  </script> -->
 
 
 </body>
